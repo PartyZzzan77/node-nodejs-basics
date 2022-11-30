@@ -1,6 +1,6 @@
 const parseEnv = () => {
   const entries = Object.entries(process.env);
-  const withRS_ = entries.filter(([key, value]) => {
+  const withRS_ = entries.filter(([key]) => {
     if (key.includes('RSS_')) {
       return key;
     }
