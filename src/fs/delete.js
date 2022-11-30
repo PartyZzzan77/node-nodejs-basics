@@ -1,7 +1,7 @@
 import { unlink } from 'node:fs/promises';
 
 const remove = async () => {
-  const path = './files/fileToRemove.txt';
+  const path = new URL('./files/fileToRemove.txt', import.meta.url);
   const errMessage = 'FS operation failed';
 
   try {
