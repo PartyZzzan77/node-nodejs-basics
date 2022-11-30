@@ -12,7 +12,7 @@ const copy = async () => {
     }
     await cp(srcPath, dirPath, { recursive: true });
   } catch (error) {
-    console.log(error);
+    process.stdout.write(error.toString() + '\n');
   }
 };
 
