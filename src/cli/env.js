@@ -7,7 +7,7 @@ const parseEnv = () => {
   });
 
   const result = withRS_
-    .map(([key, value]) => `${key}name=value${value}`)
+    .map(([key, value]) => `${key} = ${value}`)
     .join('; ');
 
   process.stdout.write(result + '\n');
