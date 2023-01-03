@@ -1,5 +1,9 @@
+import { fork } from 'node:child_process';
+
 const spawnChildProcess = async (args) => {
-    // Write your code here
+  fork('./files/script.js', args, {
+    stdio: [0, 1, 2, 'ipc'],
+  });
 };
 
 spawnChildProcess();
